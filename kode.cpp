@@ -37,3 +37,39 @@ void tampilkanDataKaryawan() {
     }
 }
 
+
+void tambahDataKaryawan() {
+    if (jumlahKaryawan < max_karyawan) {
+        Karyawan karyawan;
+
+        cout << "Masukkan Nama: ";
+        getline(cin, karyawan.nama);
+        cout << "Masukkan NIK: ";
+        getline(cin, karyawan.nik);
+        cout << "Masukkan Tanggal Lahir: ";
+        getline(cin, karyawan.tanggalLahir);
+        cout << "Masukkan Status: ";
+        getline(cin, karyawan.status);
+        cout << "Masukkan Jabatan: ";
+        getline(cin, karyawan.jabatan);
+        cout << "Masukkan Level: ";
+        getline(cin, karyawan.level);
+        cout << "Masukkan Divisi: ";
+        getline(cin, karyawan.divisi);
+        cout << "Masukkan Gaji: ";
+        cin >> karyawan.gaji;
+        cout << "Masukkan Masa Kerja (tahun): ";
+        cin >> karyawan.masaKerja;
+        cout << "Masukkan Jenis Kelamin (L/P): ";
+        cin >> karyawan.jenisKelamin;
+
+        dataKaryawan[jumlahKaryawan] = karyawan;
+        jumlahKaryawan++;
+		
+		cout << "							\n"; 
+        cout << "Data Karyawan berhasil ditambahkan.\n";
+    } else {
+    	cout << "							\n"; 
+        cout << "Data Karyawan sudah penuh.\n";
+    }
+}
