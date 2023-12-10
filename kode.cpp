@@ -108,3 +108,9 @@ void updateDataKaryawan() {
             break;
         }
     }
+    
+        if (!found) {
+    	cout << "							\n"; 
+        cout << "NIK Karyawan tidak ditemukan.\n";
+    }
+}
