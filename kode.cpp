@@ -73,3 +73,38 @@ void tambahDataKaryawan() {
         cout << "Data Karyawan sudah penuh.\n";
     }
 }  
+
+
+void updateDataKaryawan() {
+    string nikUpdate;
+    cout << "Masukkan NIK Karyawan yang akan diupdate: ";
+    cin >> nikUpdate;
+
+    bool found = false;
+    for (int i = 0; i < jumlahKaryawan; ++i) {
+        if (dataKaryawan[i].nik == nikUpdate) {
+            found = true;
+
+            cout << "Masukkan Nama Baru: ";
+            getline(cin, dataKaryawan[i].nama);
+            cout << "Masukkan Tanggal Lahir Baru: ";
+            getline(cin, dataKaryawan[i].tanggalLahir);
+            cout << "Masukkan Status Baru: ";
+            getline(cin, dataKaryawan[i].status);
+            cout << "Masukkan Jabatan Baru: ";
+            getline(cin, dataKaryawan[i].jabatan);
+            cout << "Masukkan Level Baru: ";
+            getline(cin, dataKaryawan[i].level);
+            cout << "Masukkan Divisi Baru: ";
+            getline(cin, dataKaryawan[i].divisi);
+            cout << "Masukkan Gaji Baru: ";
+            cin >> dataKaryawan[i].gaji;
+            cout << "Masukkan Masa Kerja Baru (tahun): ";
+            cin >> dataKaryawan[i].masaKerja;
+            cout << "Masukkan Jenis Kelamin Baru (L/P): ";
+            cin >> dataKaryawan[i].jenisKelamin;
+
+            cout << "Data Karyawan berhasil diupdate.\n";
+            break;
+        }
+    }
