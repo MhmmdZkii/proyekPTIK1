@@ -114,3 +114,28 @@ void updateDataKaryawan() {
         cout << "NIK Karyawan tidak ditemukan.\n";
     }
 }
+
+void hapusDataKaryawan() {
+    string nikHapus;
+    cout << "Masukkan NIK Karyawan yang akan dihapus: ";
+    cin >> nikHapus;
+
+    bool found = false;
+    for (int i = 0; i < jumlahKaryawan; ++i) {
+        if (dataKaryawan[i].nik == nikHapus) {
+            found = true;
+
+            // Memindahkan data pada posisi i ke posisi terakhir
+            dataKaryawan[i] = dataKaryawan[jumlahKaryawan - 1];
+            jumlahKaryawan--;
+
+            cout << "Data Karyawan berhasil dihapus.\n";
+            break;
+        }
+    }
+
+    if (!found) {
+        cout << "NIK Karyawan tidak ditemukan.\n";
+    }
+}
+
