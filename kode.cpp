@@ -139,3 +139,44 @@ void hapusDataKaryawan() {
     }
 }
 
+
+int main() {
+    int pilihan;
+
+    do {
+    	 cout << "									\n";
+        cout << "===== Aplikasi Data Karyawan =====\n";
+        cout << "									\n";
+		cout << "1. Tampilkan Data Karyawan\n";
+        cout << "2. Tambah Data Karyawan\n";
+        cout << "3. Update Data Karyawan\n";
+        cout << "4. Hapus Data Karyawan\n";
+        cout << "0. Keluar\n";
+        cout << "									\n";
+        cout << "Pilihan Anda: ";
+        cin >> pilihan;
+        cin.ignore(); // Membersihkan buffer keyboard
+
+        switch (pilihan) {
+            case 1:
+                tampilkanDataKaryawan();
+                break;
+            case 2:
+                tambahDataKaryawan();
+                break;
+            case 3:
+                updateDataKaryawan();
+                break;
+            case 4:
+                hapusDataKaryawan();
+                break;
+            case 0:
+                cout << "Terima kasih telah menggunakan aplikasi.\n";
+                break;
+            default:
+                cout << "Pilihan tidak valid. Silakan coba lagi.\n";
+        }
+    } while (pilihan != 0);
+
+    return 0;
+}
